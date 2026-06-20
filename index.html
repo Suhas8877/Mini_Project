@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMaster Pro</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="background-shapes">
+        <div class="shape shape1"></div>
+        <div class="shape shape2"></div>
+        <div class="shape shape3"></div>
+    </div>
+
+    <div id="app-container">
+        <!-- Loading Screen -->
+        <div id="loading-screen" class="screen active">
+            <div class="loader"></div>
+        </div>
+
+        <!-- Welcome Screen -->
+        <div id="welcome-screen" class="screen">
+            <div class="glass-card floating">
+                <div class="welcome-icon">🏆</div>
+                <h1 class="app-title">QuizMaster Pro</h1>
+                <p class="app-description">Challenge yourself with a variety of questions and see how high you can score!</p>
+                
+                <ul class="feature-list">
+                    <li>✔️ 10 Questions</li>
+                    <li>✔️ 15 Seconds Per Question</li>
+                    <li>✔️ Instant Results</li>
+                    <li>✔️ High Score Tracking</li>
+                </ul>
+
+                <div class="stats-cards">
+                    <div class="stat-card">
+                        <h4>Questions</h4>
+                        <p>10</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Time</h4>
+                        <p>15 sec</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Best Score</h4>
+                        <p id="best-score-stat">0</p>
+                    </div>
+                </div>
+
+                <button id="start-quiz-btn" class="btn">Start Quiz</button>
+            </div>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="screen">
+            <div class="glass-card">
+                <div class="quiz-progress-bar-container">
+                    <div id="quiz-progress-bar" class="quiz-progress-bar"></div>
+                </div>
+                <div class="quiz-header">
+                    <div class="question-counter">Question <span id="current-question">1</span>/<span id="total-questions">10</span></div>
+                    <div class="score-display">Score: <span id="score">0</span></div>
+                </div>
+                <div class="timer-container">
+                    <div id="timer-bar" class="timer-bar"></div>
+                    <div id="timer-text" class="timer-text">15</div>
+                </div>
+                <div id="question-container">
+                    <h2 id="question-text">Question text goes here...</h2>
+                </div>
+                <div id="answer-options" class="answer-options"></div>
+                <button id="next-question-btn" class="btn" style="display:none;">Next Question</button>
+            </div>
+        </div>
+
+        <!-- Result Screen -->
+        <div id="result-screen" class="screen">
+            <div class="glass-card">
+                <h2 class="result-title">Quiz Completed!</h2>
+                <p id="performance-message" class="performance-message"></p>
+                <div class="result-details">
+                    <p>Final Score: <span id="final-score">0</span></p>
+                    <p>Percentage: <span id="percentage">0</span>%</p>
+                    <p>Correct Answers: <span id="correct-answers">0</span></p>
+                    <p>Wrong Answers: <span id="wrong-answers">0</span></p>
+                    <p>High Score: <span id="final-high-score">0</span></p>
+                </div>
+                <button id="restart-quiz-btn" class="btn">Restart Quiz</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Developed by Manikanta </p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
